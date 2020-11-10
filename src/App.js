@@ -1,11 +1,12 @@
 import React from 'react'
-import PageHeader from './components/PageHeader'
+
+import Routes from './routes'
 
 function App() {
 	return (
-		<div>
-			<PageHeader/>
-		</div>
+		<>
+			<Routes/>
+		</>
 	)
 }
 
