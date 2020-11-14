@@ -1,8 +1,10 @@
 :root {
     --color-primary: #F0D9D5;
     --color-primary-light: #F4EEED;
+    --color-primary-dark: #c0b6c2;
     --color-text: #444;
     --color-input: #E5E5E5;
     --color-border: #B6849F;
     --color-background: #EFDED1;
+    --color-error: #c74747;
 }

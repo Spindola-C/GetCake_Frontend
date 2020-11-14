@@ -1,12 +1,13 @@
 import React from 'react'
+import InputMask from 'react-input-mask'
 
 import './styles.css'
 
-function Input({ name, label }) {
+function Input({ name, label, ...rest}) {
     return (
         <div div className="input-container" >
             <label htmlFor={name}>{label}</label>
-            <input type="text" id={name} />
+            <InputMask id={name} {...rest} />
         </div>
     )
 }

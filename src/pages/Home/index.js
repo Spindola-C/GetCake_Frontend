@@ -8,9 +8,7 @@ function Home() {
     return (
         <>
             <PageHeader title="Get Cake">
-                <div>
                     <Link to="/cadastro/cliente">Cadastro de cliente</Link>
-                </div>
             </PageHeader>
             <div style={{height: "30rem"}}/>
             <PageFooter/>

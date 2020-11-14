@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.svg'
-import menuIcon from '../../assets/images/icons/menu.svg'
+import MenuButton from '../MenuButton'
 
 import './styles.css'
 
@@ -24,28 +24,25 @@ function PageHeader({ title, children }) {
                 <div className="title-container">
                     <h1>{title}</h1>
                 </div>
-                {!menuVisivel &&
-                    (
-                        <ul className="options-container">
-                            <li>
-                                <Link to="/">Quem somos</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Lojas</Link>
-                            </li>
-                            <li>
-                                <Link to="/">Produtos</Link>
-                            </li>
-                        </ul>
-                    )
-                }
-                <Link onClick={(e) => toggleMenuVisivel(e)}>
-                    <img className="icon-menu" src={menuIcon} alt="menu" />
-                </Link>
+
+                <MenuButton visivel={menuVisivel} onClick={(e) => toggleMenuVisivel(e)} />
             </div>
-            <div>
-                {menuVisivel && children}
-            </div>
+            {menuVisivel && (
+                <div className="menu-toggle">
+                    <ul className="options-container">
+                        <li>
+                            <Link to="/">Quem somos</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Lojas</Link>
+                        </li>
+                        <li>
+                            <Link to="/">Produtos</Link>
+                        </li>
+                        {children}
+                    </ul>
+                </div>
+            )}
         </header>
     )
 }

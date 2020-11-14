@@ -1,34 +1,31 @@
-.input-container {
+.select-container {
     display: flex;
     flex-direction: column;
     position: relative;
-}
-
-.input-container + .input-container {
     margin-top: 1rem;
 }
 
-.input-container label {
-    margin-left: 10%;
-    padding: 0 2rem;
+.select-container label {
+    font: 1rem "roboto";
     color: var(--color-text);
-    font: 1rem "roboto"
+    margin-left: 10%;
+    padding-left: 2rem;
 }
 
-.input-container input {
+.select-container select {
     align-self: center;
     width: 90%;
     height: 2.6rem;
-    margin-top: 0.6rem;
+    margin-top: 0.8rem;
     border-radius: 0.8rem;
     background: var(--color-input);
     border: 1px solid var(--color-border);
     outline: 0;
-    padding: 0 2rem;
+    padding: 0 1.6rem;
     font: 1rem "roboto";
 }
 
-.input-container:focus-within::after{
+.select-container:focus-within::after{
     width: 80%;
     height: 2.5px;
     content: '';
