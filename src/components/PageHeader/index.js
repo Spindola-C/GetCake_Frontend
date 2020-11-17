@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.svg'
-import MenuButton from '../MenuButton'
+import ButtonHamburger from '../ButtonHamburger'
 
 import './styles.css'
 
@@ -25,24 +25,26 @@ function PageHeader({ title, children }) {
                     <h1>{title}</h1>
                 </div>
 
-                <MenuButton visivel={menuVisivel} onClick={(e) => toggleMenuVisivel(e)} />
+                <ButtonHamburger visivel={menuVisivel} onClick={(e) => toggleMenuVisivel(e)} />
             </div>
-            {menuVisivel && (
-                <div className="menu-toggle">
-                    <ul className="options-container">
-                        <li>
-                            <Link to="/">Quem somos</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Lojas</Link>
-                        </li>
-                        <li>
-                            <Link to="/">Produtos</Link>
-                        </li>
-                        {children}
-                    </ul>
-                </div>
-            )}
+            <div className={!menuVisivel ? "menu-toggle" : "menu-toggle open-menu"}>
+                <ul className="options-container">
+                    <li>
+                        <Link to="/">Quem somos</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Lojas</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Produtos</Link>
+                    </li>
+                    {React.Children.map(children, (child) => {
+                        return (
+                            <li>{child}</li>
+                        )
+                    })}
+                </ul>
+            </div>
         </header>
     )
 }

@@ -29,19 +29,31 @@
 }
 
 .menu-toggle {
-    transition: all .5s ease-in-out;
+    position: relative;
 }
 
 .menu-toggle .options-container{
     display: flex;
     flex-direction: column;
     flex: 1;
-    margin: 0 2rem;
+    position: absolute;
+    box-shadow: 0 0 8px var(--color-primary-dark);
+    background-color: var(--color-primary);
+    width: 100%;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
 }
 
 .menu-toggle .options-container a{
+    margin: 0 3rem;
     text-decoration: none;
-    font: 1rem "roboto";
+    font: 1.2rem "roboto";
     color: var(--color-text);
-    margin: 0 5px;
+}
+
+.menu-toggle.open-menu .options-container{
+    position: relative;
+    visibility: visible;
+    transform: translateX(0rem);
 }
