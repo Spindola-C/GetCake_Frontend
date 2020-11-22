@@ -5,7 +5,7 @@ import './styles.css'
 
 function Input({ name, label, ...rest}) {
     return (
-        <div div className="input-container" >
+        <div className="input-container" >
             <label htmlFor={name}>{label}</label>
             <InputMask id={name} {...rest} />
         </div>

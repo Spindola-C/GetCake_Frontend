@@ -1,0 +1,13 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem;
+}
+
+@media (min-width: 400px) {
+    .login-container {
+        border: solid 1px var(--color-border);
+        padding: 1rem;
+    }
+}

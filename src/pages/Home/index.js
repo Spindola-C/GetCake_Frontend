@@ -9,6 +9,7 @@ function Home() {
         <>
             <PageHeader title="Get Cake">
                     <Link to="/cadastro/cliente">Cadastro de cliente</Link>
+                    <Link to="/admin/login">Login</Link>
             </PageHeader>
             <div style={{height: "30rem"}}/>
             <PageFooter/>

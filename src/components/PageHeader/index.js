@@ -29,15 +29,6 @@ function PageHeader({ title, children }) {
             </div>
             <div className={!menuVisivel ? "menu-toggle" : "menu-toggle open-menu"}>
                 <ul className="options-container">
-                    <li>
-                        <Link to="/">Quem somos</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Lojas</Link>
-                    </li>
-                    <li>
-                        <Link to="/">Produtos</Link>
-                    </li>
                     {React.Children.map(children, (child) => {
                         return (
                             <li>{child}</li>

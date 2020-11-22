@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import Button from '../../components/Button'
 import Input from '../../components/Input'
@@ -18,6 +18,7 @@ function CadastroCliente() {
     const [nome, setNome] = useState("")
     const [cpfCnpj, setCpfCnpj] = useState("")
     const [tipoPessoa, setTipoPessoa] = useState("")
+    const [mascaraCpfOuCnpj, setMascaraCpfOuCnpj] = useState("")
 
     //estados de telefone
     const [telefones, setTelefones] = useState([""])
@@ -31,7 +32,7 @@ function CadastroCliente() {
     const [lote, setLote] = useState("")
     const [numero, setNumero] = useState("")
 
-    const [avisoError, setAvisoError] = useState("")
+    const [statusAviso, setStatusAviso] = useState({ error: false, message: "" })
 
     function adicionarNumero(e) {
         e.preventDefault()
@@ -92,16 +93,27 @@ function CadastroCliente() {
                     cidade, rua, estado, quadra, lote, numero
                 })
             }
-            alert("Cadastro realizado com sucesso!")
-            history.goBack()
+            setStatusAviso({ error: false, message: "Cadastro realizado com sucesso!" })
+            setTimeout(() => {
+                history.push("/")
+            }, 2000);
         } catch (err) {
-            setAvisoError(err.message)
+            setStatusAviso({ error: true, message: err.message })
+        }
+    }
+
+    function selecionaCpfOuCnpj() {
+        if (tipoPessoa === "F") {
+            setMascaraCpfOuCnpj("999.999.999-99")
+        } else {
+            setMascaraCpfOuCnpj("99.999.999/9999-99")
         }
     }
 
     return (
         <div className="cadastro-cliente-form">
             <PageHeader title="Cadastro de Cliente">
+                <Link to="/">Home</Link>
             </PageHeader>
             <main>
                 <form onSubmit={cadastrarCliente}>
@@ -114,13 +126,6 @@ function CadastroCliente() {
                             value={nome}
                             onChange={(e) => setNome(e.target.value)}
                         />
-                        <Input
-                            mask="999.999.999-99"
-                            name="cpfCnpj"
-                            label="CPF ou CNPJ"
-                            value={cpfCnpj}
-                            onChange={(e) => setCpfCnpj(e.target.value)}
-                        />
                         <Select
                             name="tipoPessoa"
                             label="Pessoa"
@@ -130,6 +135,14 @@ function CadastroCliente() {
                                 { value: "J", label: "Jurídica" }
                             ]}
                             onChange={(e) => setTipoPessoa(e.target.value)}
+                        />
+                        <Input
+                            mask={mascaraCpfOuCnpj}
+                            name="cpfCnpj"
+                            label="CPF ou CNPJ"
+                            value={cpfCnpj}
+                            onChange={(e) => setCpfCnpj(e.target.value)}
+                            onClick={(e) => selecionaCpfOuCnpj()}
                         />
                     </fieldset>
                     <fieldset>
@@ -156,9 +169,10 @@ function CadastroCliente() {
                             {telefones.map((telefone, index) => {
                                 return (
                                     < Input
-                                        name="telefone"
+                                        key={index}
+                                        name={`telefone${index}`}
                                         label={`Telefone ${index + 1}`}
-                                        mask="(99)99999-9999"
+                                        mask="(99)999999999"
                                         value={telefone}
                                         onChange={(e) => setNovoTelefone(index, e.target.value)}
                                     />
@@ -228,11 +242,16 @@ function CadastroCliente() {
                             label="Cadastrar Cliente"
                         />
                     </div>
-                    <div className="error-container">
-                        <span>
-                            {avisoError && (<img src={errorIcon} alt="erro"/>)}
-                            {avisoError}
-                        </span>
+                    <div className="status-container">
+                        {statusAviso.error ?
+                            <span>
+                                <img src={errorIcon} alt="erro" />
+                                {statusAviso.message}
+                            </span> :
+                            <span style={{ color: "green" }}>
+                                {statusAviso.message}
+                            </span>
+                        }
                     </div>
                 </form>
             </main>

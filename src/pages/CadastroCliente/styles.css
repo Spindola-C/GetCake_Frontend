@@ -23,7 +23,7 @@
 }
 
 .cadastro-cliente-form main fieldset .telefone-container {
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 .cadastro-cliente-form main fieldset legend button {
@@ -40,11 +40,15 @@
     color: var(--color-primary);
 }
 
+.endereco-top div{
+    margin-top: 1rem;
+}
+
 .endereco-mid div, .endereco-bot div {
     margin-top: 1rem;
 }
 
-.error-container {
+.status-container {
     display: flex;
     width: 100%;
     flex-direction: column;
@@ -53,7 +57,7 @@
     margin-top: 2rem;
 }
 
-.error-container span {
+.status-container span {
     font: 1.4rem "roboto";
     color: var(--color-error);
     padding-bottom: 1.6rem;
