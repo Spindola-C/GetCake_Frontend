@@ -1,16 +1,21 @@
-.cadastro-cliente-form main {
+.cadastro-form {
+    position: relative;
+    min-height: 100%;
+}
+
+.cadastro-form main {
     width: 100%;
-    max-width: 70rem;
-    margin: -3.2rem auto 3.2rem;
+    max-width: 60rem;
+    margin: 0 auto;
     padding-top: 6.4rem;
     overflow: hidden;
 }
 
-.cadastro-cliente-form main fieldset + fieldset {
+.cadastro-form main fieldset + fieldset {
     margin-top: 3rem;
 }
 
-.cadastro-cliente-form main fieldset legend {
+.cadastro-form main fieldset legend {
     font: 700 1.4rem "roboto";
     color: var(--color-text);
     margin-bottom: 2.4rem;
@@ -22,11 +27,11 @@
     border-bottom: 1px solid var(--color-border);
 }
 
-.cadastro-cliente-form main fieldset .telefone-container {
+.cadastro-form main fieldset .telefone-container {
     margin-top: 2rem;
 }
 
-.cadastro-cliente-form main fieldset legend button {
+.cadastro-form main fieldset legend button {
     background: none;
     border: 0;
     color: var(--color-primary-dark);
@@ -36,7 +41,7 @@
     margin-right: 1rem;
 }
 
-.cadastro-cliente-form main fieldset legend button:hover {
+.cadastro-form main fieldset legend button:hover {
     color: var(--color-primary);
 }
 
@@ -66,7 +71,7 @@
 }
 
 @media (min-width: 700px) {
-    .cadastro-cliente-form main fieldset .telefone-container {
+    .cadastro-form main fieldset .telefone-container {
         display: flex;
         width: 100%;
         align-items: center;
@@ -74,16 +79,16 @@
         margin-top: 2rem;
     }
 
-    .cadastro-cliente-form main fieldset .telefone-container > div {
+    .cadastro-form main fieldset .telefone-container > div {
         margin-top: 1rem;
     }
 
-    .cadastro-cliente-form main fieldset .telefone-container div {
+    .cadastro-form main fieldset .telefone-container div {
         flex: 1;
     }
 
-    .cadastro-cliente-form main fieldset .endereco-top,
-    .cadastro-cliente-form main fieldset .endereco-bot{
+    .cadastro-form main fieldset .endereco-top,
+    .cadastro-form main fieldset .endereco-bot{
         display: flex;
         width: 100%;
         padding: 0 5%;
@@ -91,8 +96,8 @@
         justify-content: space-between;
     }
 
-    .cadastro-cliente-form main fieldset .endereco-top div,
-    .cadastro-cliente-form main fieldset .endereco-top div {
+    .cadastro-form main fieldset .endereco-top div,
+    .cadastro-form main fieldset .endereco-top div {
         flex: 1;
     }
 }

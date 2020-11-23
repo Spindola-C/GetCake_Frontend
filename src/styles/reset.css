@@ -49,3 +49,9 @@ table {
 body {
 	background-color: var(--color-primary-light);
 }
+html,
+body,
+#root{
+   margin:0;
+   padding:0;
+}

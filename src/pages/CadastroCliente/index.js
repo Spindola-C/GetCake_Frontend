@@ -111,7 +111,7 @@ function CadastroCliente() {
     }
 
     return (
-        <div className="cadastro-cliente-form">
+        <div className="cadastro-form">
             <PageHeader title="Cadastro de Cliente">
                 <Link to="/">Home</Link>
             </PageHeader>

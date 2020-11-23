@@ -1,0 +1,45 @@
+.cadastro-form {
+    height: 100%;
+}
+
+.cadastro-form main {
+    width: 100%;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding-top: 6.4rem;
+    overflow: hidden;
+}
+
+.cadastro-form main fieldset + fieldset {
+    margin-top: 3rem;
+}
+
+.cadastro-form main fieldset legend {
+    font: 700 1.4rem "roboto";
+    color: var(--color-text);
+    margin-bottom: 2.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-bottom: 1.6rem;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.status-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    margin-top: 2rem;
+    margin-bottom: 15rem;
+}
+
+.status-container span {
+    font: 1.4rem "roboto";
+    color: var(--color-error);
+    padding-bottom: 1.6rem;
+    display: flex;
+    align-items: center;
+}
