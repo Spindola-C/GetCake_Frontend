@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import errorIcon from '../../assets/images/icons/error-icon.svg'
 import Button from '../../components/Button'
@@ -50,9 +50,7 @@ function CadastroFuncionario() {
 
     return (
         <div className="cadastro-form">
-            <PageHeader title="Cadastro Funcionário">
-                <Link to="/">Home</Link>
-            </PageHeader>
+            <PageHeader title="Cadastro Funcionário"/>
             <main>
                 <form onSubmit={cadastrarFuncionario}>
                     <fieldset>

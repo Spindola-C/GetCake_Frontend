@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
 
 import PageHeader from '../../components/PageHeader'
 import PageFooter from '../../components/PageFooter'
@@ -19,9 +18,8 @@ function AdminLogin() {
 
     return (
         <>
-            <PageHeader title="Login Usuário">
-                <Link to="/">Home</Link>
-            </PageHeader>
+            <PageHeader title="Login Usuário"/>
+            
             <main className="form-container">
                 <form onSubmit={login}>
                     <section className="login-container">

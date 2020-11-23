@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, useHistory } from 'react-router-dom'
+import { useHistory } from 'react-router-dom'
 
 import Button from '../../components/Button'
 import Input from '../../components/Input'
@@ -112,9 +112,8 @@ function CadastroCliente() {
 
     return (
         <div className="cadastro-form">
-            <PageHeader title="Cadastro de Cliente">
-                <Link to="/">Home</Link>
-            </PageHeader>
+            <PageHeader title="Cadastro de Cliente"/>
+            
             <main>
                 <form onSubmit={cadastrarCliente}>
                     <fieldset>
