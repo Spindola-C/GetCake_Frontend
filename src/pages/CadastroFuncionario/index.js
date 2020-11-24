@@ -7,7 +7,7 @@ import Input from '../../components/Input'
 import PageFooter from '../../components/PageFooter'
 import PageHeader from '../../components/PageHeader'
 import Select from '../../components/Select'
-import api from '../../services/api'
+import { api } from '../../services/api'
 
 import './styles.css'
 
