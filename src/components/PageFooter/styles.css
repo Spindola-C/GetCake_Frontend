@@ -1,9 +1,7 @@
 .page-footer {
     display: flex;
-    position: absolute;
     width: 100%;
-    height: 10rem;
-    bottom: 0;
+    height: 5rem;
     background-color: var(--color-primary);
 }
 
