@@ -2,11 +2,11 @@ import React from 'react'
 
 import './styles.css'
 
-function Button({ label, ...rest }) {
+function Button({ children, ...rest }) {
     return (
         <div className="button-container" >
             <button {...rest}>
-                {label}
+                {children}
             </button>
         </div>
     )

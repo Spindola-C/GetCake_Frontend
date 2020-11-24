@@ -18,14 +18,14 @@ function Home () {
   return (
     <>
       <PageHeader />
-      <div className='home'>
+      <section className='home'>
         <h2>Produtos</h2>
         <div className='home-products'>
           {data.map(item => (
             <Products key={item.id} item={item} />
           ))}
         </div>
-      </div>
+      </section>
       <PageFooter />
     </>
   )

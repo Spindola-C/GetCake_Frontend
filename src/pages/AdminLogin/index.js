@@ -38,9 +38,8 @@ function AdminLogin() {
                             onChange={(e) => setSenha(e.target.value)}
                         />
                         <Button
-                            label="Login"
                             type="submit"
-                        />
+                        >Login</Button>
                     </section>
                 </form>
             </main>

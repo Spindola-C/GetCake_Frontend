@@ -2,48 +2,48 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de chocolate",
+      "valor": 10.15
     },
     {
       "id": 2,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de morango",
+      "valor": 10.15
     },
     {
       "id": 3,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de leite ninho",
+      "valor": 10.15
     },
     {
       "id": 4,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de cenoura com chocolate",
+      "valor": 10.15
     },
     {
       "id": 5,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de milho",
+      "valor": 10.15
     },
     {
       "id": 6,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de queijo",
+      "valor": 10.15
     },
     {
       "id": 7,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de maracuja",
+      "valor": 10.15
     },
     {
       "id": 8,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de prestigio",
+      "valor": 10.15
     }, 
     {
       "id": 9,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de fuba",
+      "valor": 10.15
     }
   ]
 }
