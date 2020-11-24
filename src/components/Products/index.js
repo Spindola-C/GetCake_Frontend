@@ -15,7 +15,7 @@ export default function Products ({ item }) {
           <span>R$ {item.valor}</span>
         </div>
         <div className="product-button">
-          <Button>Adicionar ao carrinho</Button>
+          <Button className="button-product">Adicionar ao carrinho</Button>
         </div>
       </div>
     </>

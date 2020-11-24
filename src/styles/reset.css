@@ -48,7 +48,7 @@ table {
 	box-sizing: border-box;
 }
 body {
-	background-color: var(--color-primary-light);
+	background-color: #fff
 }
 html,
 body,

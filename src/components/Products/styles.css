@@ -2,8 +2,8 @@
   display: flex;
   border-radius: 0.313rem;
   margin: 0.313rem 0;
-  border: 1px solid var(--gray-color);
-  height: 18rem;
+  border: 1px solid #ccc;
+  height: 20rem;
   background-color: #fff;
   flex-direction: column;
   align-items: center;

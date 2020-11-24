@@ -1,28 +1,18 @@
-.button-container {
-    display: flex;
-    width: 100%;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 2rem;
-}
 
-.button-container button{
-    width: 90%;
-    height: 3rem;
-    background: var(--color-primary);
+button {
+    border-radius: .6rem;
+    border: none;
+    background-color: var(--color-primary-light);
+    text-transform: uppercase;
     color: var(--color-text);
-    border: 0;
-    border-radius: 0.8rem;
-    cursor: pointer;
-    font: 700 1.5rem "roboto";
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    transition: background-color 0.2s;
-    margin-top: 3.2rem;
+    font-weight: bold;
 }
 
-.button-container button:hover {
-    color: var(--color-primary-dark)
+.button-primary {
+    
+}
+
+.button-product {
+   padding: 0.8rem;
+   font-size: 0.8rem
 }
