@@ -2,23 +2,57 @@
   "produtos": [
     {
       "id": 1,
-      "nome": "json-server",
-      "valor": "10.15"
+      "nome": "Bolo de chocolate",
+      "valor": 10.15,
+      "descricao": "bolo de chocolate gostoso com nutella, kitkat, ninho e ouro branco"
     },
     {
-      "id": 1,
-      "nome": "json-server",
-      "valor": "10.15"
+      "id": 2,
+      "nome": "Bolo de morango",
+      "valor": 10.15,
+      "descricao": "bolo de morango gostoso com nutella, morango, ninho, uma delicia! experimente já"
     },
     {
-      "id": 1,
-      "nome": "json-server",
-      "valor": "10.15"
+      "id": 3,
+      "nome": "Bolo de leite ninho",
+      "valor": 10.15,
+      "descricao": "bolo de leite ninho gostoso com nutella"
     },
     {
-      "id": 1,
-      "nome": "json-server",
-      "valor": "10.15"
+      "id": 4,
+      "nome": "Bolo de cenoura",
+      "valor": 10.15,
+      "descricao": "bolo de cenoura gostoso com nutella"
+    },
+    {
+      "id": 5,
+      "nome": "Bolo de milho",
+      "valor": 10.15,
+      "descricao": "bolo de milho gostoso com nutella"
+    },
+    {
+      "id": 6,
+      "nome": "Bolo de queijo",
+      "valor": 10.15,
+      "descricao": "bolo de queijo gostoso com nutella"
+    },
+    {
+      "id": 7,
+      "nome": "Bolo de maracuja",
+      "valor": 10.15,
+      "descricao": "bolo de maracuja gostoso com nutella"
+    },
+    {
+      "id": 8,
+      "nome": "Bolo de prestigio",
+      "valor": 10.15,
+      "descricao": "bolo de prestigio gostoso com doce e nutella"
+    }, 
+    {
+      "id": 9,
+      "nome": "Bolo de fuba",
+      "valor": 10.15,
+      "descricao": "bolo de fuba gostoso com nutella e cafe"
     }
   ]
 }

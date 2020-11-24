@@ -5,9 +5,20 @@
     margin-top: 4rem;
 }
 
+.form-button {
+    width: 100%;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.form-button button {
+    width: 100%;
+}
+
 @media (min-width: 400px) {
     .login-container {
         border: solid 1px var(--color-border);
         padding: 1rem;
+        border-radius: 0.313rem;
     }
 }
