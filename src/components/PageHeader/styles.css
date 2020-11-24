@@ -1,0 +1,145 @@
+.page-header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    top: 0;
+    background-color: var(--color-primary);
+}
+
+.page-header .top-bar-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3rem 0;
+}
+
+.page-header .top-bar-container .title-container {
+    color: var(--color-text);
+    font: 700 1.2rem "roboto";
+}
+
+.page-header .top-bar-container .options-container-max {
+    display: none;
+}
+
+.title-container-max{
+    display: none;
+}
+
+.page-header .top-bar-container a>img {
+    height: 2.6rem;
+}
+
+.menu-toggle {
+    position: relative;
+}
+
+.menu-toggle .options-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    position: absolute;
+    box-shadow: 0 0 8px var(--color-primary-dark);
+    background-color: var(--color-primary);
+    width: 100%;
+    visibility: hidden;
+    transform: translateX(-100%);
+    transition: all .3s ease-in-out;
+}
+
+.menu-toggle .options-container ul li {
+    margin-bottom: 10px;
+    box-shadow: 0 2px 5px var(--color-primary-dark);
+}
+
+.menu-toggle .options-container input{
+    display: none;
+}
+
+.menu-toggle .options-container input ~ ul {
+    overflow: hidden;
+    margin-left: 2rem;
+    max-height: 0;
+    transition: all .2s linear;
+}
+
+.menu-toggle .options-container input:checked ~ ul{
+    height: auto;
+    max-height: 200px;
+}
+
+.menu-toggle .options-container a, 
+.menu-toggle .options-container label{
+    margin: 0 3rem;
+    text-decoration: none;
+    font: 1.2rem "roboto";
+    color: var(--color-text);
+}
+
+.menu-toggle .options-container a:hover, 
+.menu-toggle .options-container label:hover{
+    color: var(--color-primary-dark);
+}
+
+.menu-toggle.open-menu .options-container {
+    position: relative;
+    visibility: visible;
+    transform: translateX(0rem);
+}
+
+@media (min-width: 700px) {
+    .title-container-max {
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        margin-top: 1rem;
+        color: var(--color-text);
+        font: 700 1.3rem "roboto";
+    }
+    .page-header .top-bar-container .title-container,
+    .page-header .options-container,
+    .menu-btn {
+        display: none;
+    }
+    .page-header .top-bar-container .options-container-max,
+    .page-header .top-bar-container .options-container-max ul {
+        display: flex;
+    }
+    .page-header .top-bar-container .options-container-max ul input {
+        display: none;
+    }
+    .page-header .top-bar-container .options-container-max ul a,
+    .page-header .top-bar-container .options-container-max ul label {
+        margin: 0 1rem;
+        text-decoration: none;
+        font: 1.2rem "roboto";
+        color: var(--color-text);
+    }
+    .page-header .top-bar-container .options-container-max input ~ ul li{
+        margin-bottom: 5px;
+        box-shadow: 0 2px 5px var(--color-primary-dark);
+    }
+    .page-header .top-bar-container .options-container-max ul a:hover,
+    .page-header .top-bar-container .options-container-max ul label:hover {
+        color: var(--color-primary-dark);
+    }
+    .page-header .top-bar-container .options-container-max ul li ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+    }
+    .page-header .top-bar-container .options-container-max input ~ ul {
+        overflow: hidden;
+        max-height: 0;
+        transition: all .2s linear;
+    }
+    .page-header .top-bar-container .options-container-max input:checked ~ ul{
+        height: auto;
+        max-height: 200px;
+        margin-top: .5rem;
+        border-radius: 10px;
+        background: var(--color-primary);
+    }
+}

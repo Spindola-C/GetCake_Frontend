@@ -1,0 +1,24 @@
+.page-footer {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 10rem;
+    bottom: 0;
+    background-color: var(--color-primary);
+}
+
+.page-footer .footer-container {
+    width: 95%;
+    margin:0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-footer .footer-container img {
+    height: 2.6rem;
+}
+
+.page-footer .footer-container p {
+    font-size: 0.8rem;
+}
