@@ -95,7 +95,7 @@ function CadastroFuncionario () {
               onChange={e => setStatus(e.target.value)}
             />
           </fieldset>
-          <div>
+          <div className="cadastro-button">
             <Button type='submit'>Cadastrar Funcionário</Button>
           </div>
           <div className='status-container'>
