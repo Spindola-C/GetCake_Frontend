@@ -6,6 +6,7 @@ button {
     text-transform: uppercase;
     color: var(--color-text);
     font-weight: bold;
+    cursor: pointer;
 }
 
 .button-primary {
