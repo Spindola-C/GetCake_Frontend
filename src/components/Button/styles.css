@@ -18,3 +18,9 @@ button {
    padding: 0.8rem;
    font-size: 0.8rem
 }
+
+.button-count {
+    background-color: #fff;
+    padding: 0;
+    background-color: transparent;
+  }
