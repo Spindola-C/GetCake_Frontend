@@ -47,12 +47,32 @@
       "nome": "Bolo de prestigio",
       "valor": 10.15,
       "descricao": "bolo de prestigio gostoso com doce e nutella"
-    }, 
+    },
     {
       "id": 9,
       "nome": "Bolo de fuba",
       "valor": 10.15,
       "descricao": "bolo de fuba gostoso com nutella e cafe"
+    }
+  ],
+  "carrinho": [
+    {
+      "id": 1,
+      "nome": "Bolo de chocolate",
+      "valor": 10.15,
+      "descricao": "bolo de chocolate gostoso com nutella, kitkat, ninho e ouro branco"
+    },
+    {
+      "id": 2,
+      "nome": "Bolo de morango",
+      "valor": 10.15,
+      "descricao": "bolo de morango gostoso com nutella, morango, ninho, uma delicia! experimente já"
+    },
+    {
+      "id": 3,
+      "nome": "Bolo de leite ninho",
+      "valor": 10.15,
+      "descricao": "bolo de leite ninho gostoso com nutella"
     }
   ]
 }

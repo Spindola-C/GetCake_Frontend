@@ -1,0 +1,11 @@
+.cart {
+  width: 95%;
+  margin: 0 auto;
+  max-width: 81rem;
+  height: 100vh;
+}
+
+.cart h2 {
+  margin: 1.25rem 0;
+  font-size: 2rem;
+}
