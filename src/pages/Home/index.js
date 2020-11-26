@@ -14,7 +14,6 @@ function Home () {
     request('produtos')
   }, [request])
 
-  console.log(data, 'produtos')
   return (
     <>
       <PageHeader />

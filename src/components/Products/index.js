@@ -2,8 +2,10 @@ import React from 'react'
 import './styles.css'
 import Cake from '../../assets/images/bolos.jpg'
 import Button from '../Button'
+import { useCart } from '../../hooks/useCart'
 
 export default function Products ({ item }) {
+  const { addCart } = useCart()
   return (
     <>
       <div className='product'>
@@ -22,7 +24,7 @@ export default function Products ({ item }) {
         </div>
 
         <div className='product-button'>
-          <Button className='button-product'>Adicionar ao carrinho</Button>
+          <Button className='button-product' onClick={() => addCart(item)}>Adicionar ao carrinho</Button>
         </div>
       </div>
     </>
