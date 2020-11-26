@@ -1,9 +1,15 @@
 .cart {
+  width: 100%;
+  max-width: 81rem;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.cart section {
   width: 95%;
   margin: 0 auto;
-  max-width: 81rem;
-  height: 100vh;
-  margin-bottom: 15rem;
+  margin-bottom: 7rem;
 }
 
 .cart h2 {

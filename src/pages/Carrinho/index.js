@@ -18,7 +18,7 @@ function Carrinho () {
     }).format(number)
   }
 
-  const totalQty = (item) => {
+  const totalQty = item => {
     const { valor } = item
     const { quantity } = item
     const valueQty = valor * quantity
@@ -32,22 +32,26 @@ function Carrinho () {
 
   return (
     <>
-      <PageHeader />
-      <section className='cart'>
-        <h2>Carrinho</h2>
-        {products.length > 0 ? (
-          products.map(item => <Cart key={item.id} item={item} totalQty={totalQty} />)
-        ) : (
-          <div className=''>
-            <p>Carrinho vazio ):</p>
+      <main className='cart'>
+        <PageHeader />
+        <section>
+          <h2>Carrinho</h2>
+          {products.length > 0 ? (
+            products.map(item => (
+              <Cart key={item.id} item={item} totalQty={totalQty} />
+            ))
+          ) : (
+            <div className=''>
+              <p>Carrinho vazio ):</p>
+            </div>
+          )}
+          <div className='cart-total'>
+            <span>Total: {formatedNumber(totalPriceItems.toFixed(2))}</span>
+            <Button type='button'>Finalizar Compra</Button>
           </div>
-        )}
-        <div className='cart-total'>
-          <span>Total: {formatedNumber(totalPriceItems.toFixed(2))}</span>
-          <Button type='button'>Finalizar Compra</Button>
-        </div>
-      </section>
-      <PageFooter />
+        </section>
+        <PageFooter />
+      </main>
     </>
   )
 }

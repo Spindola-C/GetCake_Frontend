@@ -1,9 +1,10 @@
 .cadastro-form {
-    height: 100%;
+    width: 100%;
+    min-height: 100%;
 }
 
 .cadastro-form main {
-    width: 100%;
+    width: 95%;
     max-width: 60rem;
     margin: 0 auto;
     padding-top: 6.4rem;

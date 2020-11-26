@@ -1,7 +1,15 @@
 .home {
+  width: 100%;
+  min-height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.home section {
   width: 95%;
   margin: 0 auto;
   max-width: 81rem;
+  margin-bottom: 6rem;
 }
 
 .home h2 {
