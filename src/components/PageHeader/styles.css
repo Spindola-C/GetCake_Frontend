@@ -170,3 +170,10 @@
         background: var(--color-primary);
     }
 }
+
+@media(max-width: 420px) {
+    .header-cart--items{
+        top: 0rem;
+        left: 3.5rem;
+      }
+}

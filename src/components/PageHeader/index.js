@@ -21,7 +21,7 @@ function PageHeader ({ title }) {
     const total = cont + current.quantity
     return total
   }, 0)
-  
+
   return (
     <>
       <header className='page-header'>
@@ -91,6 +91,16 @@ function PageHeader ({ title }) {
               </li>
               <li>
                 <Link to='/admin/login'>Login</Link>
+              </li>
+              <li className='header-cart'>
+                <Link to='/carrinho'>
+                  <img src={Cart} alt='Carrinho' />
+                  {products.length > 0 && (
+                    <div className='header-cart--items'>
+                      <span>{qtyProducts}</span>
+                    </div>
+                  )}
+                </Link>
               </li>
             </ul>
           </nav>
