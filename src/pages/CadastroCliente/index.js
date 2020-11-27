@@ -79,15 +79,16 @@ function CadastroCliente () {
         tipo: tipoPessoa
       })
 
-      const cliente = await api.get(`cliente?cpf_cnpj=${cpfCnpj}`)
+      const cliente = await api.get(`id/cliente?cpf_cnpj=${cpfCnpj}`)
       const idCliente = !cliente.data[0] ? null : cliente.data[0].idCliente
 
       if (idCliente) {
-        await api.post(`telefone?idCliente=${idCliente}`, {
+        await api.post(`telefone`, {
           tipoTelefone,
           telefone1: telefones[0],
           telefone2: telefones[1],
-          telefone3: telefones[2]
+          telefone3: telefones[2],
+          idCliente
         })
         await api.post(`endereco`, {
           cidade,
@@ -95,7 +96,8 @@ function CadastroCliente () {
           estado,
           quadra,
           lote,
-          numero
+          numero,
+          idCliente
         })
       }
       setStatusAviso({
