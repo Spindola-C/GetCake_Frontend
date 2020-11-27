@@ -56,3 +56,18 @@
   font-weight: bold;
   right: 0.5rem;
 }
+
+@media(max-width:420px) {
+  .cart-product {
+    flex-direction: column;
+    height: 28rem;
+    max-height: 28rem;
+  }
+  .cart-product-img {
+    width: 100%;
+    height: 80%;
+  }
+  .cart-total button {
+    width: 60%;
+}
+}
