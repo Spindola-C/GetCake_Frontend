@@ -2,17 +2,25 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 
 import logo from '../../assets/images/logo.svg'
+import Cart from '../../assets/images/cart.svg'
 import ButtonHamburger from '../ButtonHamburger'
+import { useCart } from '../../hooks/useCart'
 
 import './styles.css'
 
 function PageHeader ({ title }) {
+  const { products } = useCart()
   const [menuVisivel, setMenuVisivel] = useState(false)
 
   function toggleMenuVisivel (e) {
     e.preventDefault()
     setMenuVisivel(!menuVisivel)
   }
+
+  const qtyProducts = products.reduce((cont, current) => {
+    const total = cont + current.quantity
+    return total
+  }, 0)
 
   return (
     <>
@@ -45,8 +53,15 @@ function PageHeader ({ title }) {
               <li>
                 <Link to='/admin/login'>Login</Link>
               </li>
-              <li>
-                <Link to='/carrinho'>Carrinho</Link>
+              <li className='header-cart'>
+                <Link to='/carrinho'>
+                  <img src={Cart} alt='Carrinho' />
+                  {products.length > 0 && (
+                    <div className='header-cart--items'>
+                      <span>{qtyProducts}</span>
+                    </div>
+                  )}
+                </Link>
               </li>
             </ul>
           </nav>
@@ -76,6 +91,16 @@ function PageHeader ({ title }) {
               </li>
               <li>
                 <Link to='/admin/login'>Login</Link>
+              </li>
+              <li className='header-cart'>
+                <Link to='/carrinho'>
+                  <img src={Cart} alt='Carrinho' />
+                  {products.length > 0 && (
+                    <div className='header-cart--items'>
+                      <span>{qtyProducts}</span>
+                    </div>
+                  )}
+                </Link>
               </li>
             </ul>
           </nav>
