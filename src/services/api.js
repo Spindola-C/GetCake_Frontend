@@ -5,6 +5,6 @@ export const api = axios.create({
 })
 
 export const get_api = axios.create({
-    baseURL: 'http://localhost:3000',
+    baseURL: 'https://getcake.herokuapp.com/',
 })
 
