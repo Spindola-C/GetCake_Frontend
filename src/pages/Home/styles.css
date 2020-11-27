@@ -25,6 +25,15 @@
   margin-bottom: 5rem;
 }
 
+.home-error {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 15rem;
+}
+
 @media (max-width: 900px) {
   .home-products {
     grid-template-columns: repeat(3, 1fr);

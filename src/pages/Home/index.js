@@ -8,7 +8,7 @@ import useApi from '../../hooks/useApi'
 import Products from '../../components/Products'
 
 function Home () {
-  const { data, loading, error, request } = useApi()
+  const { data, error, request } = useApi()
 
   useEffect(() => {
     request('produtos')
@@ -20,11 +20,17 @@ function Home () {
         <PageHeader />
         <section>
           <h2>Produtos</h2>
-          <div className='home-products'>
-            {data.map(item => (
-              <Products key={item.id} item={item} />
-            ))}
-          </div>
+          {!error || data.length > 0 ? (
+            <div className='home-products'>
+              {data.map(item => (
+                <Products key={item.id} item={item} />
+              ))}
+            </div>
+          ) : (
+            <div className="home-error">
+              <p>{error}</p>
+            </div>
+          )}
         </section>
         <PageFooter />
       </main>

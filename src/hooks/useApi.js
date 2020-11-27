@@ -14,7 +14,7 @@ const useApi = () => {
       setData(response.data)
       setLoading(false)
     } catch (err) {
-      setError(err.message)
+      setError('Ops! Não foi possível carregar.')
       setLoading(false)
     }
   }, [])
