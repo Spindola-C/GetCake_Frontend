@@ -4,7 +4,6 @@ import PageHeader from '../../components/PageHeader'
 import PageFooter from '../../components/PageFooter'
 import Button from '../../components/Button'
 
-import useApi from '../../hooks/useApi'
 import Cart from '../../components/Cart'
 import { useCart } from '../../hooks/useCart'
 
